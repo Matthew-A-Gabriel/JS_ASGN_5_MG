@@ -89,10 +89,10 @@ function addItemList (){
  const quantity = document.createElement("p");
 
  // assigning classes to the elemtns
- container.classList.add("div_task");
- item.classList.add("listed_p");
- cross.classList.add("cross_out");
- finished.classList.add("remover");
+ container.classList.add("");
+ item.classList.add("");
+ price.classList.add("");
+ quantity.classList.add("");
 
  // putting the text in the elements
  item.innerText = bCode.name;
