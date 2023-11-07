@@ -1,0 +1,63 @@
+
+#topSection{
+    background-color: wheat;
+    text-align: center;
+
+}
+
+#barCode{
+
+
+}
+
+#itemQuant{
+
+
+}
+
+#addItems{
+
+
+}
+
+#bottomSection{
+
+
+}
+
+#headingBox{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+}
+
+#cartTitle{
+    text-align: center;
+
+}
+
+#list{
+
+
+}
+
+#total{
+
+
+}
+
+#checkOut{
+
+
+}
+
+#grandTotal{
+
+
+}
+
+.alignCenter{
+    text-align: center;
+
+}
