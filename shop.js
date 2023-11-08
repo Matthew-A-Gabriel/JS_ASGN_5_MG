@@ -12,7 +12,7 @@ const firstAid = {
     price: 20.99,
 }
 const pencils = {
-    name:"Box of Pencils (50ct.)"
+    name:"Box of Pencils (50ct.)",
     price:15.99
 }
 const wipes = {
@@ -52,25 +52,25 @@ const iOSProgramingTextbook = {
     price:119.99,
 }
 const noteBook = {
-    name:"Spiral Notebook",
-    price:1.99,
+    name : "Spiral Notebook",
+    price : 1.99,
 }
 
 const itemList = {
-    "689145740844" ; jsTextbook ,
-    "4549292070248" ; xPaper ,
-    "092265222983" ; firstAid ,
-    "X002ELVL3J" ; pencils ,
-    "686024002468" ; wipes ,
-    "860004186236" ; mask ,
-    "036000214000" ; kleenex ,
-    "8809693254156" ; sanitizer ,
-    "036500060480" ; PPaper ,
-    "085014561877" ; brushPen ,
-    "X0032YGP2T" ; adaptor ,
-    "B07G6JT1XS" ; scissors ,
-    "9780134682334" ; iOSProgramingTextbook ,
-    "718103230759" ; noteBook ,
+    "689145740844" : jsTextbook ,
+    "4549292070248" : xPaper ,
+    "092265222983" : firstAid ,
+    "X002ELVL3J" : pencils ,
+    "686024002468" : wipes ,
+    "860004186236" : mask ,
+    "036000214000" : kleenex ,
+    "8809693254156" : sanitizer ,
+    "036500060480" : PPaper ,
+    "085014561877" : brushPen ,
+    "X0032YGP2T" : adaptor ,
+    "B07G6JT1XS" : scissors ,
+    "9780134682334" : iOSProgramingTextbook ,
+    "718103230759" : noteBook ,
 }
 
 // html elements
@@ -89,15 +89,15 @@ function addItemList (){
  const quantity = document.createElement("p");
 
  // assigning classes to the elemtns
- container.classList.add("");
- item.classList.add("");
- price.classList.add("");
- quantity.classList.add("");
+ container.classList.add("headingBox");
+ item.classList.add("margins");
+ price.classList.add("margins");
+ quantity.classList.add("margins");
 
  // putting the text in the elements
- item.innerText = bCode.name;
- price.innerText = bCode.price;
- quantity.innerText = iQuantity;
+ item.innerText = bCode.value[name];
+ price.innerText = bCode.value[price];
+ quantity.innerText = iQuantity.value;
 
  // contained in a contianer then that container in the task_area
  list.appendChild(container);

@@ -7,57 +7,47 @@
 
 #barCode{
 
-
 }
 
 #itemQuant{
-
 
 }
 
 #addItems{
 
-
 }
 
 #bottomSection{
-
 
 }
 
 #headingBox{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
-
+    justify-content: center;
+    
 }
 
 #cartTitle{
     text-align: center;
-
 }
 
 #list{
-
 
 }
 
 #total{
 
-
 }
 
 #checkOut{
-
 
 }
 
 #grandTotal{
 
-
 }
 
-.alignCenter{
-    text-align: center;
-
+.margins{
+    margin: 0px 10vw;
 }
