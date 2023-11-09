@@ -79,30 +79,39 @@ var iQuantity = document.getElementById("itemQuant");
 var aItems = document.getElementById("addItems");
 var cOut = document.getElementById("checkOut");
 var list = document.getElementById("list");
+var gTotal = 0;
+var total = document.getElementById("total");
+var grandTotal = document.getElementById("grandTotal");
+var totalCost = 0;
 
 // VVvv WIP vvVV 
 function addItemList (){
- // making the new elements for the tasking
- const container = document.createElement("div")
- const item = document.createElement("p");
- const price = document.createElement("p");
- const quantity = document.createElement("p");
+    // making the new elements for the tasking
+    const container = document.createElement("div")
+    const item = document.createElement("p");
+    const price = document.createElement("p");
+    const quantity = document.createElement("p");
 
- // assigning classes to the elemtns
- container.classList.add("headingBox");
- item.classList.add("margins");
- price.classList.add("margins");
- quantity.classList.add("margins");
+    // assigning classes to the elemtns
+    container.classList.add("headingBox");
+    item.classList.add("margins");
+    price.classList.add("margins");
+    quantity.classList.add("margins");
 
- // putting the text in the elements
- item.innerText = bCode.value[name];
- price.innerText = bCode.value[price];
- quantity.innerText = iQuantity.value;
+    // putting the text in the elements
+    item.innerText = itemList[bCode.value].name;
+    price.innerText = "$" + itemList[bCode.value].price;
+    quantity.innerText = iQuantity.value;
+    totalCost += itemList[bCode.value].price;
+    total.innerText = "$" + totalCost
+    gTotal = 1.0925 * totalCost
+    grandTotal.innerText = "$" + gTotal.toFixed(2)
+    
 
- // contained in a contianer then that container in the task_area
- list.appendChild(container);
- container.appendChild(item);
- container.appendChild(price);
- container.appendChild(quantity);
+    // contained in a contianer then that container in the task_area
+    list.appendChild(container);
+    container.appendChild(item);
+    container.appendChild(price);
+    container.appendChild(quantity);
 }
 aItems.addEventListener("click", addItemList);
