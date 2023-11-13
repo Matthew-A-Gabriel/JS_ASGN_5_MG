@@ -1,8 +1,13 @@
+#titleHeader{
+    font-size: 3rem;
+}
 
 #topSection{
     background-color: wheat;
     text-align: center;
-
+    padding: 0.5rem 0.5rem 3rem 0.5rem;
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
 }
 
 #barCode{
@@ -26,11 +31,13 @@
     flex-wrap: nowrap;
     justify-content: center;
     flex-direction: row;
+    /* justify-content: space-between; */
     
 }
 
 #cartTitle{
     text-align: center;
+    font-size: 2.25rem;
 }
 
 #list{
@@ -49,6 +56,14 @@
 
 }
 
-.margins{
-    margin: 0px 10vw;
+.itemLeft{
+justify-self: flex-start;
 }
+.itemCenter{
+justify-self: center;
+}
+
+.itemRight{
+justify-self: flex-end;
+}
+
