@@ -92,12 +92,20 @@ function addItemList (){
     const price = document.createElement("p");
     const quantity = document.createElement("p");
 
+    // contained in a contianer then that container in the task_area
+    container.appendChild(item);
+    container.appendChild(price);
+    container.appendChild(quantity);
+    list.appendChild(container);
+
     // assigning classes to the elemtns
     container.classList.add("headingBox");
-    item.classList.add("margins");
-    price.classList.add("margins");
-    quantity.classList.add("margins");
+    item.classList.add("itemLeft");
+    price.classList.add("itemCenter");
+    quantity.classList.add("itemRight");
 
+
+    
     // putting the text in the elements
     item.innerText = itemList[bCode.value].name;
     price.innerText = "$" + itemList[bCode.value].price;
@@ -108,10 +116,6 @@ function addItemList (){
     grandTotal.innerText = "$" + gTotal.toFixed(2)
     
 
-    // contained in a contianer then that container in the task_area
-    list.appendChild(container);
-    container.appendChild(item);
-    container.appendChild(price);
-    container.appendChild(quantity);
+
 }
 aItems.addEventListener("click", addItemList);

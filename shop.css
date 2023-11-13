@@ -29,9 +29,10 @@
 #headingBox{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
     
 }
 
@@ -57,13 +58,13 @@
 }
 
 .itemLeft{
-justify-self: flex-start;
+text-align: left;
 }
 .itemCenter{
-justify-self: center;
+text-align: left;
 }
 
 .itemRight{
-justify-self: flex-end;
+text-align: left;
 }
 
