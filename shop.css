@@ -26,14 +26,12 @@
 
 }
 
-#headingBox{
+.headingBox{
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
     justify-content: space-evenly;
     width: 80%;
     margin: auto;
-    
 }
 
 #cartTitle{

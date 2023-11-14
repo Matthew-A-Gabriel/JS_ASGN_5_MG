@@ -86,25 +86,27 @@ var totalCost = 0;
 
 // VVvv WIP vvVV 
 function addItemList (){
-    // making the new elements for the tasking
-    const container = document.createElement("div")
-    const item = document.createElement("p");
-    const price = document.createElement("p");
-    const quantity = document.createElement("p");
-
-    // contained in a contianer then that container in the task_area
-    container.appendChild(item);
-    container.appendChild(price);
-    container.appendChild(quantity);
+    if(list.hasOwnProperty(itemList.bCode.value) === false){
+        if()
+    // making Container for new listing
+    const container = document.createElement("div");
+    container.classList.add("headingBox");
     list.appendChild(container);
 
-    // assigning classes to the elemtns
-    container.classList.add("headingBox");
+    // making left (item)
+    const item = document.createElement("p");
     item.classList.add("itemLeft");
+    container.appendChild(item);
+
+    // making center (price)
+    const price = document.createElement("p");
     price.classList.add("itemCenter");
+    container.appendChild(price);
+    
+    // making right (quantity)
+    const quantity = document.createElement("p");
     quantity.classList.add("itemRight");
-
-
+    container.appendChild(quantity);
     
     // putting the text in the elements
     item.innerText = itemList[bCode.value].name;
@@ -114,8 +116,9 @@ function addItemList (){
     total.innerText = "$" + totalCost
     gTotal = 1.0925 * totalCost
     grandTotal.innerText = "$" + gTotal.toFixed(2)
-    
+    } else{
 
 
+    }
 }
 aItems.addEventListener("click", addItemList);
