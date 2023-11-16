@@ -86,7 +86,14 @@ var totalCost = 0;
 
 // VVvv Add to Cart Code vvVV 
 function addItemList (){
-        if(iQuantity !== 0){
+    var valOfQuant = parseInt(iQuantity.value)
+    if(valOfQuant < 0){
+        return
+    }
+
+        
+
+        if(valOfQuant !== 0){
             // making Container for new listing
             const container = document.createElement("div");
             container.classList.add("headingBox");
@@ -109,15 +116,18 @@ function addItemList (){
             
             // putting the text in the elements
             item.innerText = itemList[bCode.value].name;
-            price.innerText = "$" + itemList[bCode.value].price;
+            price.innerText = "$" + itemList[bCode.value].price*iQuantity.value;
             quantity.innerText = iQuantity.value;
-            totalCost += itemList[bCode.value].price;
+            totalCost += itemList[bCode.value].price*iQuantity.value;
             total.innerText = "$" + totalCost
             gTotal = 1.0925 * totalCost
             grandTotal.innerText = "$" + gTotal.toFixed(2)
-        } else if (iQuantity = 0){
-            console.log("testing...")
+        } else if (valOfQuant === 0){
+            return
         }
 }
+/
+//
+//
 // event listener
 aItems.addEventListener("click", addItemList);
