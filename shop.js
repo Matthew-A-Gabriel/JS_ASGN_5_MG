@@ -83,15 +83,23 @@ var gTotal = 0;
 var total = document.getElementById("total");
 var grandTotal = document.getElementById("grandTotal");
 var totalCost = 0;
+let listCheck = [];
 
 // VVvv Add to Cart Code vvVV 
 function addItemList (){
     var valOfQuant = parseInt(iQuantity.value)
-    if(valOfQuant < 0){
+    
+    if(listCheck.hasOwnProperty(bCode.value)){
+    return
+    }
+    
+    if(valOfQuant <= 0){
         return
     }
 
-        
+        listCheck.push(bCode.value)
+        console.log(listCheck)
+        console.log(bCode.value)
 
         if(valOfQuant !== 0){
             // making Container for new listing
@@ -122,12 +130,8 @@ function addItemList (){
             total.innerText = "$" + totalCost
             gTotal = 1.0925 * totalCost
             grandTotal.innerText = "$" + gTotal.toFixed(2)
-        } else if (valOfQuant === 0){
-            return
         }
 }
-/
-//
-//
+
 // event listener
 aItems.addEventListener("click", addItemList);
