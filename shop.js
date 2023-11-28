@@ -73,7 +73,7 @@ const itemList = {
     "718103230759" : noteBook ,
 }
 
-// html elements
+// Variabkes
 var bCode = document.getElementById("barcode");
 var iQuantity = document.getElementById("itemQuant");
 var aItems = document.getElementById("addItems");
@@ -89,7 +89,7 @@ let listCheck = [];
 function addItemList (){
     var valOfQuant = parseInt(iQuantity.value)
     
-    if(listCheck.hasOwnProperty(bCode.value)){
+    if(listCheck.includes(bCode.value)){
     return
     }
     
@@ -97,40 +97,40 @@ function addItemList (){
         return
     }
 
-        listCheck.push(bCode.value)
-        console.log(listCheck)
-        console.log(bCode.value)
+    listCheck.push(bCode.value)
+    console.log(listCheck)
+    console.log(bCode.value)
 
-        if(valOfQuant !== 0){
-            // making Container for new listing
-            const container = document.createElement("div");
-            container.classList.add("headingBox");
-            list.appendChild(container);
+    if(valOfQuant !== 0){
+        // making Container for new listing
+        const container = document.createElement("div");
+        container.classList.add("headingBox");
+        list.appendChild(container);
 
-            // making left (item)
-            const item = document.createElement("p");
-            item.classList.add("itemLeft");
-            container.appendChild(item);
+        // making left (item)
+        const item = document.createElement("p");
+        item.classList.add("itemLeft");
+        container.appendChild(item);
 
-            // making center (price)
-            const price = document.createElement("p");
-            price.classList.add("itemCenter");
-            container.appendChild(price);
+        // making center (price)
+        const price = document.createElement("p");
+        price.classList.add("itemCenter");
+        container.appendChild(price);
             
-            // making right (quantity)
-            const quantity = document.createElement("p");
-            quantity.classList.add("itemRight");
-            container.appendChild(quantity);
+        // making right (quantity)
+        const quantity = document.createElement("p");
+        quantity.classList.add("itemRight");
+        container.appendChild(quantity);
             
-            // putting the text in the elements
-            item.innerText = itemList[bCode.value].name;
-            price.innerText = "$" + itemList[bCode.value].price*iQuantity.value;
-            quantity.innerText = iQuantity.value;
-            totalCost += itemList[bCode.value].price*iQuantity.value;
-            total.innerText = "$" + totalCost
-            gTotal = 1.0925 * totalCost
-            grandTotal.innerText = "$" + gTotal.toFixed(2)
-        }
+        // putting the text in the elements
+        item.innerText = itemList[bCode.value].name;
+        price.innerText = "$" + itemList[bCode.value].price*iQuantity.value;
+        quantity.innerText = iQuantity.value;
+        totalCost += itemList[bCode.value].price*iQuantity.value;
+        total.innerText = "$" + totalCost
+        gTotal = 1.0925 * totalCost
+        grandTotal.innerText = "$" + gTotal.toFixed(2)
+    }
 }
 
 // event listener
